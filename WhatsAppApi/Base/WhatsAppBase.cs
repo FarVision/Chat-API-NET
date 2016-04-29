@@ -12,11 +12,15 @@ namespace WhatsAppApi
 {
     public class WhatsAppBase : WhatsEventBase
     {
+        public long m_LastSentInfo = 0;
+
         protected ProtocolTreeNode uploadResponse;
 
         protected AccountInfo accountinfo;
 
         public static bool DEBUG;
+
+        public static bool DEBUGOutBound;
 
         protected string password;
 
@@ -138,8 +142,10 @@ namespace WhatsAppApi
             }
         }
 
-        protected void SendNode(ProtocolTreeNode node)
+        //BRIAN MODIFIED FIXME: SHOULD NOT BE OPENED LIKE THIS INLINE THE Axolotl CLASS INSTEAD
+        public void SendNode(ProtocolTreeNode node)
         {
+            m_LastSentInfo = DateTime.UtcNow.ToFileTime();
             this.SendData(this.BinWriter.Write(node));
         }
     }

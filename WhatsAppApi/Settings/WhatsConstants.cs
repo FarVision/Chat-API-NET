@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -33,11 +33,11 @@ namespace WhatsAppApi.Settings
         /// </summary>
         public const string WhatsGroupChat = "g.us";
 
-
         /// <summary>
         /// The whatsapp version the client complies to
         /// </summary>
-		public const string WhatsAppVer = "2.12.81";
+		//public const string WhatsAppVer = "2.13.21";
+        public const string WhatsAppVer = "2.12.440";
 
         /// <summary>
         /// The port that needs to be connected to
@@ -47,12 +47,25 @@ namespace WhatsAppApi.Settings
         /// <summary>
         /// iPhone device
         /// </summary>
-		public const string Device = "S40";
+        //	public const string Device = "S40";
+        public const string Device = "Android";
+
+        /// <summary>
+        /// manufacturer
+        /// </summary>
+        public const string Manufacturer = "Xiaomi";
+
+        /// <summary>
+        /// OS Version
+        /// </summary>
+        public const string OS_Version = "4.3";
 
         /// <summary>
         /// The useragent used for http requests
         /// </summary>
-		public const string UserAgent = "WhatsApp/2.12.81 S40Version/14.26 Device/Nokia302";
+		//public const string UserAgent = "WhatsApp/2.13.21 S40Version/14.26 Device/Nokia302";
+        public const string UserAgent = "WhatsApp/2.12.440 Android/4.3 Device/Xiaomi-HM_1SW";
+
 
         #endregion
 
